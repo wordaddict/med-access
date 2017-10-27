@@ -18,3 +18,12 @@ router.get('/login', (req, res) => {
 router.get('/signup', (req, res) => {
   console.log('You are on the signup page');
 });
+
+app.post('/users', (req, res) => {
+  var hopperRef = usersRef.child("");
+  hopperRef.update({
+  username
+  });
+});
+
+module.exports = {router};
