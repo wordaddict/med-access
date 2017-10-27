@@ -6,12 +6,13 @@ const path = require('path');
 
 var router = require('router.js');
 
-const admin = require('firebase-admin');
-var serviceAccount = require('');
+var admin = require("firebase-admin");
 
-var firebaseAdmin = admin.initializeApp({
+var serviceAccount = require("./med-access-firebase-adminsdk-y4y60-2530421c8f.json");
+
+admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: ''
+  databaseURL: "https://med-access.firebaseio.com"
 });
 
 var app = express();
